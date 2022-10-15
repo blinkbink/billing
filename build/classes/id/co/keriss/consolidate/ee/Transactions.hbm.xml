@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="id.co.keriss.consolidate.ee.Transactions" table="transactions">
+		<id name="id" column="id" type="java.lang.Long">
+			<generator class="sequence">
+				<param name="sequence">transactions_id_seq</param>
+			</generator>
+		</id>
+
+		<property name="created_date" type="java.util.Date"></property>
+		<property name="amount" type="long"></property>
+		<property name="balance" type="long"></property>
+		<property name="description" type="int"></property>
+		<property name="comments" type="string"></property>
+		
+		<many-to-one name="external_key"
+			class="org.jpos.ee.Accounts" not-null="false"></many-to-one>
+
+	</class>
+</hibernate-mapping>

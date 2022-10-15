@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="id.co.keriss.consolidate.ee.ApiSystem" table="apisystem">
+   <id name="id" column="id" type="java.lang.Long">
+     <generator class="sequence">
+      <param name="sequence">apisystem_id_seq</param>
+     </generator>
+    </id>
+    <property name="maintanance" type="boolean"></property>
+ 
+  </class>
+</hibernate-mapping>

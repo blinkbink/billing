@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<property name="title">Get Balance</property>
+	<page-action name="apiBiling.Prepaid.Balance" />
+</page>
+

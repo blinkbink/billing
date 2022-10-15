@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<page>
+    <property name="title">List Plan</property>
+    <page-action name="apiBiling.Postpaid.PostpaidTransactions"/>
+</page>
+

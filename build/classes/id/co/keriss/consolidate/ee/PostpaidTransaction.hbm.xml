@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="id.co.keriss.consolidate.ee.PostpaidTransaction" table="postpaid_usage">
+	
+    <id name="id" column="id" type="java.lang.Long">
+		<generator class="sequence">
+				<param name="sequence">postpaid_usage_id_seq</param>
+		</generator>
+ 	</id>      
+ 	
+ 	<many-to-one name="invoice_items_id" class="id.co.keriss.consolidate.ee.InvoiceItems"></many-to-one>
+    <property name="external_key" type="string"></property>
+    <many-to-one name="tenant" class="id.co.keriss.consolidate.ee.Tenant"></many-to-one>
+    <property name="date" type="java.util.Date" />
+    <property name="amount" type="java.lang.Long"></property>
+    
+  </class>
+  
+</hibernate-mapping>

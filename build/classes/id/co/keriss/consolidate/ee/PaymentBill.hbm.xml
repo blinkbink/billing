@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="id.co.keriss.consolidate.ee.PaymentBill" table="payment_bill">
+   <id name="id" column="id" type="java.lang.Long">
+     <generator class="sequence">
+      <param name="sequence">payment_bill_id_seq</param>
+     </generator>
+    </id>
+    
+    <many-to-one name="invoice_items_id"
+			class="id.co.keriss.consolidate.ee.InvoiceItems"></many-to-one>
+			
+    <property name="payment_date" type="java.util.Date"></property>
+    <property name="status" type="string"></property>
+    <property name="total_transfer" type="string"></property>
+    <property name="from_bank" type="string"></property>
+    <property name="description" type="string"></property>
+    <property name="account_number" type="string"></property>
+    <property name="payment_proof" type="string"></property>
+    <many-to-one name="tenant"
+			class="id.co.keriss.consolidate.ee.Tenant"></many-to-one>
+    <property name="price" type="string"></property>
+    <property name="total_product" type="string"></property>
+    
+  </class>
+</hibernate-mapping>

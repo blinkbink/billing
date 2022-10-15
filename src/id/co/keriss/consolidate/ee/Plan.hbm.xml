@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="id.co.keriss.consolidate.ee.Plan" table="plan">
+   <id name="id" column="id" type="java.lang.Long">
+     <generator class="sequence">
+      <param name="sequence">plan_id_seq</param>
+     </generator>
+    </id>
+    
+    <property name="plan_name" type="string" />
+    <property name="external_key" type="string" />
+    <property name="type" type="string" />
+    <property name="price" type="java.lang.Long" />
+    <property name="amount" type="java.lang.Long" />
+    <many-to-one name="tenant" class="id.co.keriss.consolidate.ee.Tenant"></many-to-one>
+	<property name="created_date" type="java.util.Date" />
+	<property name="updated_date" type="java.util.Date" />
+    
+  </class>
+</hibernate-mapping>

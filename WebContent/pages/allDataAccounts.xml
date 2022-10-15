@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<page>
+    <property name="title">All Accounts</property>
+    <page-action name="apiBiling.Prepaid.FetchAllAccounts" />
+</page>
+

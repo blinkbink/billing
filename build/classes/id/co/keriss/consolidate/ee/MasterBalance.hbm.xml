@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping 
+  SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="id.co.keriss.consolidate.ee.MasterBalance" table="master_balance">
+	
+    <id name="id" column="id" type="java.math.BigInteger">
+		<generator class="sequence">
+				<param name="sequence">master_balance_id_seq</param>
+		</generator>
+ 	</id>
+
+    <property name="externalkey" type="string"></property>
+    <many-to-one name="tenant_record_id" class="id.co.keriss.consolidate.ee.Tenant"></many-to-one>
+    <property name="balance" type="java.math.BigDecimal"></property>
+	<!--<property name="free_balance" type="java.math.BigDecimal"></property> -->
+  </class>
+  
+</hibernate-mapping>
